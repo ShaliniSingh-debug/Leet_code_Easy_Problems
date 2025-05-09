@@ -3,10 +3,10 @@ class Solution:
         if  len(nums)<2:
             return 0
         nums.sort()
-        res=0
+        res=[]
         for i in range(len(nums)-1):
-            res = max(res,nums[i+1]-nums[i])
-        return res
+            res.append(nums[i+1]-nums[i])
+        return max(res)
             
         
 
