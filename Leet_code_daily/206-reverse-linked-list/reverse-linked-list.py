@@ -10,10 +10,10 @@ class Solution:
         curr = head 
         prev = None
         while curr:
-            temp= curr.next
-            curr.next= prev
-            prev=curr
-            curr = temp
+            temp= curr.next #temp will save the rest of the values 
+            curr.next= prev #curr value will be shifted to prev
+            prev=curr # prev will become current
+            curr = temp # currect will grab the temp values
         return prev
 
         
