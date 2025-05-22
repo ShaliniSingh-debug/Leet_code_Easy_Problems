@@ -8,7 +8,7 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         slow = head
         fast = head 
-        while fast !=None and fast.next != None:
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
             # check if the pointers come to a point where list is forming the cycle
