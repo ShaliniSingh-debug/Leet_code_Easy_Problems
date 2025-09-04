@@ -1,9 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        twosumDict={}
-        for i,j in enumerate(nums):
-            presentval=target-nums[i]
-            if presentval in twosumDict:
-                return [twosumDict[presentval],i]
-            twosumDict[j]=i
+        memo={}
+        for i in range(len(nums)):
+            if nums[i] in memo:
+                return [memo[nums[i]],i]
+            else:
+                memo[target-nums[i]]=i
+
+
         
