@@ -7,13 +7,15 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head is None:
             return None
-        curr = head 
         prev = None
+        curr= head
         while curr:
-            temp= curr.next #temp will save the rest of the values 
-            curr.next= prev #curr value will be shifted to prev
-            prev=curr # prev will become current
-            curr = temp # currect will grab the temp values
+            temp=curr.next
+            curr.next=prev
+            prev=curr
+            curr=temp
+            
         return prev
+
 
         
