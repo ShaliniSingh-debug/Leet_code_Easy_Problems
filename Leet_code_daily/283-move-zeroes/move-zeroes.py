@@ -5,12 +5,10 @@ class Solution:
         """
         if len(nums)==0:
             return 0
-        r=len(nums)-1
         i=0
         for j in range(len(nums)):
-            if nums[j]!=0:
-                nums[i],nums[j]=nums[j],nums[i]
-                i +=1
-
+            if nums[j] !=0:
+                nums[i],nums[j] = nums[j],nums[i]
+                i+=1
         
         
